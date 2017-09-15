@@ -24,11 +24,14 @@ proc iml ;
 	eigvalue = eigvec(Y);
 	
 	score = X * eigvalue;
+
+	xy = score[,1:2];
+	print xy;
 	
 	* print score;
 	* print eigvalue;
 	print autvalue;
 	
 
-	run scatter(score[,1], score[,2], label, label);
+	run scatter(score[,1], score[,2], label, label) label = {"CP1" "CP2"};
 	

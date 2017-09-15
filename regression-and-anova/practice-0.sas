@@ -29,6 +29,7 @@ RUN;
 PROC PRINT DATA=poblacion;
 RUN;
 
+
 /*
  * Exercise 2 
  */
@@ -50,6 +51,7 @@ RUN;
 
 PROC PRINT data=poblasup;
 RUN;
+
 
 /*
  * Exercise 3 
@@ -77,6 +79,7 @@ RUN;
 PROC PRINT DATA=completo;
 RUN;
 
+
 /*
  * Exercise 4 
  */
@@ -88,6 +91,7 @@ RUN;
 
 PROC PRINT DATA=completo;
 RUN;
+
 
 /*
  * Exercise 5 
@@ -127,16 +131,6 @@ RUN;
 PROC PRINT DATA=maspobladas;
 RUN;
 
-/*
- * Exercise 7
- */
-
-DATA maspobladas;
-	SET clasificado (WHERE=(poblacion >= 300000));
-RUN;
-
-PROC PRINT DATA=maspobladas;
-RUN;
 
 /*
  * Exercise 8

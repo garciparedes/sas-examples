@@ -108,10 +108,62 @@ RUN;
 DATA clasificado;
 	SET completo;
 	FORMAT tamano $12.;
-	IF superficie > 10000 THEN tamano = 'grande';
-	ELSE tamano = 'pequeno';
+	IF superficie <= 10000 THEN tamano = 'pequeno';
+	ELSE tamano = 'grande';
 RUN;
 
 PROC PRINT DATA=clasificado;
 RUN;
  
+  
+/*
+ * Exercise 7
+ */
+
+DATA maspobladas;
+	SET clasificado (WHERE=(poblacion >= 300000));
+RUN;
+
+PROC PRINT DATA=maspobladas;
+RUN;
+
+/*
+ * Exercise 7
+ */
+
+DATA maspobladas;
+	SET clasificado (WHERE=(poblacion >= 300000));
+RUN;
+
+PROC PRINT DATA=maspobladas;
+RUN;
+
+/*
+ * Exercise 8
+ */
+
+PROC UNIVARIATE DATA=clasificado;
+	VAR poblacion superficie;
+RUN;
+
+PROC UNIVARIATE DATA=clasificado;
+	CLASS tamano;
+	VAR poblacion superficie;
+RUN;
+
+
+/*
+ * Exercise 9
+ */
+
+PROC SGPLOT DATA=clasificado;
+	reg x=poblacion y=superficie;
+RUN;
+ 
+PROC CORR DATA=clasificado outp=cp_poblacion_superficie;
+	VAR poblacion superficie;
+RUN;
+
+PROC PRINT DATA=cp_poblacion_superficie;
+RUN; 
+

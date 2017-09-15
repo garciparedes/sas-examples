@@ -33,5 +33,7 @@ proc iml ;
 	print autvalue;
 	
 
-	run scatter(score[,1], score[,2], label, label) label = {"CP1" "CP2"};
+	run scatter(score[,1], score[,2], label, label) 
+								label = {"CP1" "CP2"} 
+								grid= {X Y};
 	

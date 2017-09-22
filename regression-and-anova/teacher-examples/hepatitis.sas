@@ -1,14 +1,11 @@
-/* 
+/*
  * University: Universidad de Valladolid
  * Degree: Grado en Estadística
  * Subject: Regresión y ANOVA
  * Year: 2017/18
  * Teacher: Lourdes Barba Escribá
- * 
+ *
  */
-
-
-
 *SE TRATA DE VER si hay diferencias entre 5 medicamentos para la hepatitis. ;
 
 data hepatitis;
@@ -31,9 +28,10 @@ data hepatitis;
 proc print ;
 run;
 
-/*proc gplot;
-plot tiempo *medicamento;
-run;*/
+proc sgplot ;
+	series y=tiempo x=medicamento;
+run;
+
 proc sgplot ;
 	scatter y=tiempo x=medicamento;
 run;

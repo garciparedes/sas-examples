@@ -4,8 +4,8 @@
  * Subject: Regresión y ANOVA
  * Year: 2017/18
  * Author: Sergio García Prado (garciparedes.me)
- * Name: Práctica 0
- * 
+ * Name: Práctica 00
+ *
  */
 
 /*
@@ -31,7 +31,7 @@ RUN;
 
 
 /*
- * Exercise 2 
+ * Exercise 2
  */
 
 DATA poblasup;
@@ -54,17 +54,17 @@ RUN;
 
 
 /*
- * Exercise 3 
+ * Exercise 3
  */
 
 DATA completo;
 	FORMAT provincia $12.;
 	INPUT provincia $ poblacion superficie;
-	CARDS; 
+	CARDS;
 		Valladolid 521661 8202
 		Zamora 197237 10559
 	;
-	
+
 RUN;
 
 PROC APPEND BASE=completo DATA=poblasup;
@@ -81,7 +81,7 @@ RUN;
 
 
 /*
- * Exercise 4 
+ * Exercise 4
  */
 
 DATA completo;
@@ -94,7 +94,7 @@ RUN;
 
 
 /*
- * Exercise 5 
+ * Exercise 5
  */
 
 PROC SORT DATA=completo;
@@ -118,8 +118,8 @@ RUN;
 
 PROC PRINT DATA=clasificado;
 RUN;
- 
-  
+
+
 /*
  * Exercise 7
  */
@@ -153,11 +153,10 @@ RUN;
 PROC SGPLOT DATA=clasificado;
 	reg x=poblacion y=superficie;
 RUN;
- 
+
 PROC CORR DATA=clasificado outp=cp_poblacion_superficie;
 	VAR poblacion superficie;
 RUN;
 
 PROC PRINT DATA=cp_poblacion_superficie;
-RUN; 
-
+RUN;

@@ -19,7 +19,7 @@ RUN;
 proc print data=work.fuel;
 run;
 
-proc anova;
+proc anova data=work.fuel;
 	class treatment;
 	model y = treatment;
 	means treatment;

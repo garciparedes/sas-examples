@@ -27,7 +27,7 @@ run;
 proc anova data=work.mouse_maze;
 	class color;
 	model time=color;
-	run;
+run;
 
 /**
  * a) Estudia si este factor influye en el tiempo correspondiente:

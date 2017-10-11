@@ -27,5 +27,27 @@ data pulgones;
 	0 0 0 4 1 5 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 ;
 
-proc print data=pulgones;
+
+proc print data=pulgones (obs=8);
+run;
+
+proc univariate data=pulgones plot;
+	by semana;
+	var recuento;
+	qqplot recuento / normal;
+run;
+
+proc glm data=pulgones;
+	class semana;
+	model recuento=semana;
+	output out= resal p=pred r=res student=rst;
+proc print data=resal;run;
+
+proc univariate plot normal data=resal;
+	var res;
+run;
+
+proc glm data=pulgones;
+	class semana;
+	model recuento=semana;
 run;

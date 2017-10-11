@@ -31,8 +31,11 @@ proc iml ;
 
 	X_norm = (X - mean(X)) / std(X);
 
+  print(X_norm);
+
 	X_star = (X_norm` * X_norm) / (nrow(X_norm) - 1);
 
+	print(X_star);
 	X_star_autval = eigval(X_star);
 	X_star_autvec = eigvec(X_star);
 

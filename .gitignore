@@ -1,33 +1,22 @@
-# History files
-.Rhistory
-.Rapp.history
 
-# Session Data files
-.RData
+/**/teacher-examples/
 
-# Example code in package build process
-*-Ex.R
+# Created by https://www.gitignore.io/api/sas
 
-# Output files from R CMD build
-/*.tar.gz
+### SAS ###
+# Binary data formats
+.sas7baud
+.sas7bdat
+.sas7bvew
+.sas7bndx
+.sas7bcat
+.sas7bacs
+.sas7bfdb
+.sas7bmdb
+.sas7bdmd
+.sas7bitm
+.sas7butl
+.sas7bput
+.sas7bbak
 
-# Output files from R CMD check
-/*.Rcheck/
-
-# RStudio files
-.Rproj.user/
-
-# produced vignettes
-vignettes/*.html
-vignettes/*.pdf
-
-# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
-.httr-oauth
-
-# knitr and R markdown default cache directories
-/*_cache/
-/cache/
-
-# Temporary files created by R markdown
-*.utf8.md
-*.knit.md
+# End of https://www.gitignore.io/api/sas

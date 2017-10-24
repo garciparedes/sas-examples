@@ -1,3 +1,13 @@
+/*
+ * University: Universidad de Valladolid
+ * Degree: Grado en Estadística
+ * Subject: Análisis de Datos
+ * Year: 2017/18
+ * Author: Sergio García Prado (garciparedes.me)
+ * Name: Análisis de Componentes Principales - Práctica 01
+ *
+ */
+
 proc iml ;
 	datasetNames = {
 	"mts100" "longitud" "peso" "altura" "mts400" "vallas110" "disco" "pertiga"

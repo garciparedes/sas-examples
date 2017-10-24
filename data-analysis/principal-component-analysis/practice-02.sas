@@ -4,14 +4,14 @@
  * Subject: Análisis de Datos
  * Year: 2017/18
  * Author: Sergio García Prado (garciparedes.me)
- * Name: Práctica 01
+ * Name: Análisis de Componentes Principales - Práctica 02
  *
  */
 
 proc iml ;
 
 	/**
-	 * Importar los datos a SAS desde el fichero Olympic2016 v2.txt;
+	 * 1)	Importar los datos a SAS desde el fichero Olympic2016 v2.txt
 	 */
 
 	datasetNames={
@@ -24,7 +24,7 @@ proc iml ;
 	print A;
 
 	/**
-	 * Efectuar mediante IML un ACP normado con los datos de las 10 pruebas.
+	 * 2)	Efectuar mediante IML un ACP normado con los datos de las 10 pruebas.
 	 */
 
 	X = A[,1:10];
@@ -41,8 +41,8 @@ proc iml ;
 
 
 	/**
-	 * Calcular los scores en las 10 componentes y comprobar que tienen media 0
-	 * y varianza igual al autovalor correspondiente.
+	 * 3)	Calcular los scores en las 10 componentes y comprobar que tienen media 0
+	 * 		y varianza igual al autovalor correspondiente.
 	 */
 
 	S = X_norm * X_star_autvec;
@@ -54,8 +54,8 @@ proc iml ;
 	print S_var, X_star_autval;
 
 	/**
-	 * Calcular las contribuciones absolutas y relativas de los puntos a las
-	 * componentes y hacer la representación gráfica correspondiente.
+	 * 4)	Calcular las contribuciones absolutas y relativas de los puntos a las
+	 * 		componentes y hacer la representación gráfica correspondiente.
 	 */
 	print X_norm, X_star_autval;
 
@@ -85,9 +85,9 @@ proc iml ;
 
 
 	/**
-	 * Considerar ahora la nube de los puntos columna y calcular los autovalores y
-	 * autovectores correspondientes. Comprobar las relaciones con los resultados
-	 * de la nube de puntos fila.
+	 * 5)	Considerar ahora la nube de los puntos columna y calcular los 
+	 * 		autovalores y autovectores correspondientes. Comprobar las relaciones con
+	 * 	 	los resultados de la nube de puntos fila.
 	 */
 
 
@@ -102,22 +102,27 @@ proc iml ;
 	X_vars_star_autvec_2 = (X_norm*X_star_autvec)/(((nrow(X_norm)-1) * X_star_autval)` ## 0.5);
 	print X_vars_star_autvec_2;
 
-	X_star_autvec_2 = (X_norm`*X_vars_star_autvec)/(((nrow(X_norm)-1) * X_vars_star_autval)` ## 0.5);
+	G = (X_norm`*X_vars_star_autvec_2);
+	X_star_autvec_2 = G/(((nrow(X_norm)-1) * X_vars_star_autval)` ## 0.5);
+	
 	print X_star_autvec_2;
 	print X_star_autvec;
 
 	*X_star_autvec_2 = (X_norm`*X_vars_star_autvec)/((nrow(X_norm) -1) *X_vars_star_autval` ## 0.5);
 	*print X_star_autvec_2;
 
-	/**
-	 * Calcular las proyecciones de las variables (scores) en los nuevos ejes.
-	 * Calcular sus medias, sus varianzas y la suma de sus cuadrados (dividida por n-1).
-	 */
 
 	/**
-	 * Reconstruir la matriz de datos original a partir de los autovalores y autovectores.
+	 * 6)	Calcular las proyecciones de las variables (scores) en los nuevos ejes.
+	 * 		Calcular sus medias, sus varianzas y la suma de sus cuadrados (dividida por n-1).
 	 */
 
+
 	/**
-	 * Reconstruir la matriz con las dos primeras componentes principales y valorar la pérdida.
+	 * 7)	Reconstruir la matriz de datos original a partir de los autovalores y autovectores.
+	 */
+
+
+	/**
+	 * 8)	Reconstruir la matriz con las dos primeras componentes principales y valorar la pérdida.
 	 */

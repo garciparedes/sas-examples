@@ -4,7 +4,7 @@
  * Subject: Regresión y ANOVA
  * Year: 2017/18
  * Author: Sergio García Prado (garciparedes.me)
- * Name: Práctica 00
+ * Name: Getting Started Practice
  *
  */
 

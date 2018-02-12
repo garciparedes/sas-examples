@@ -1,12 +1,16 @@
-# sas-examples
-Set of awesome SAS Examples Edit
+# SAS Examples
+Set of awesome SAS Examples.
 
 ## Contents
-  * University of Valladolid:
-    * Data Analysis:
-      * TODO
-    * Statistical Computation:
-      * TODO
+
+  * [Data Analysis](data-analysis/):
+    * [Principal Component Analysis](data-analysis/principal-component-analysis/)
+    * [Correspondence Analysis](data-analysis/correspondence-analysis/)
+  * [Regression and ANOVA](regression-and-anova/):
+    * [One Way ANOVA](regression-and-anova/one-way-anova-exercises/)
+    * [Simple Regression](regression-and-anova/simple-regression-exercises/)
+  * [Statistical Computation](statistical-computation/):
+    * TODO
 
 
 ## Authors
@@ -14,6 +18,3 @@ Set of awesome SAS Examples Edit
 
 ## License
   * [Apache-2.0](LICENSE)
-
-## Like it? Awesome!
-If you find this tool useful, consider supporting or [buying me a beer](https://www.paypal.me/garciparedes/2):)

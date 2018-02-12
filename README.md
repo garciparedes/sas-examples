@@ -13,7 +13,7 @@ Set of awesome SAS Examples.
     * TODO
 
 
-## Authors
+## Contributors
   * Sergio García Prado: [@garciparedes](http://garciparedes.me)
 
 ## License

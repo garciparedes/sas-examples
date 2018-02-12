@@ -1,3 +1,15 @@
+/**
+ * 
+ * Title:
+ * 	Statistical Computation - Exercise Set 0 - Exercise 1
+ * 
+ * Date:
+ * 	February 2018
+ * 
+ * Authors:
+ * 	Sergio Garcia Prado - https://garciparedes.me
+ * 
+ */
 
 /**
  * Import dataset (by libname linking)
@@ -11,7 +23,7 @@ run;
 /**
  * Get Number of Variables, Variable Names and Number of Observations
  */
-proc contents data=cabezas.cabezas1;
+proc contents data=cabezas.cabezas1 position;
 run;
 
 /**

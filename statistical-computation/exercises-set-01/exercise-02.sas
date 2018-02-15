@@ -19,6 +19,7 @@
  */
 
 data coches_v1;
+	length Model $16 Company $16;
 	input Model $ Year Company $ Seats Color $;
 	if Year < 1970 then do;
 		Type = "clasico";

@@ -1,7 +1,7 @@
 /**
  * 
  * Title:
- * 	Statistical Computation - Exercise Set 1 - Exercise 1
+ * 	Statistical Computation - Exercise Set 1 - Exercise 2
  * 
  * Date:
  * 	February 2018

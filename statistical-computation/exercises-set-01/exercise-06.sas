@@ -99,12 +99,11 @@ run;
  */
 
 proc sort data = encuesta.todo;
-	by resi;
+	by RESI;
 run;
 
-proc tabulate data = encuesta.todo;
-	class resi;
-	table resi;
+proc freq data = encuesta.todo;
+	table RESI;
 run;
 
 
@@ -113,12 +112,29 @@ run;
  */
 
 
+proc sort data = encuesta.todo;
+	by RESI ESTUDIOS_PREVIOS;
+run;
+
+proc tabulate data = encuesta.todo;
+	class RESI ESTUDIOS_PREVIOS;
+	TABLE RESI, ESTUDIOS_PREVIOS;
+run;
+
 
 
 /**
  * h)
  */
 
+
+proc sgplot data = encuesta.todo;
+	histogram ALTURA;
+run;
+
+proc sgplot data = encuesta.todo;
+	vbox ALTURA;
+run;
 
 
 
@@ -127,6 +143,9 @@ run;
  */
 
 
+proc sgplot data = encuesta.todo;
+	vbox ALTURA / category=RESI;
+run;
 
 
 /**
@@ -134,6 +153,9 @@ run;
  */
 
 
+proc sgplot data = encuesta.todo;
+	vbox ALTURA / category=AGNO;
+run;
 
 
 /**
@@ -141,18 +163,25 @@ run;
  */
 
 
+proc univariate data = encuesta.todo;
+	var ALTURA;
+run;
 
 
 /**
  * l)
  */
 
-
+proc corr data = encuesta.todo out = corre_encuesta;
+run;
 
 
 /**
  * m)
  */
 
+proc sgplot data = encuesta.todo;
+ scatter y = ALTURA x = NUMERO_PIE;
+run;
 
 

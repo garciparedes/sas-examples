@@ -37,7 +37,7 @@ data hoja.encuesta;
 
 run;
 
-proc print data = hoja.encuesta (obs = 10);
+proc print data = hoja.encuesta;
 run;
 
 

@@ -19,13 +19,13 @@
  */
 
 data coches_v1;
-	length Model $16 Company $16;
-	input Model $ Year Company $ Seats Color $;
-	if Year < 1970 then do;
-		Type = "clasico";
+	length MODEL $16 COMPANY $16;
+	input MODEL $ YEAR COMPANY $ SEATS COLOR $;
+	if YEAR < 1970 then do;
+		TYPE = "clasico";
 	end;
 	else do;
-		Type = "normal";
+		TYPE = "normal";
 	end;
 	datalines;
 	Corvette 1955 . 2 negro
@@ -49,8 +49,8 @@ run;
 
 data coches_v2;
 	set coches_v1;
-	if missing(Company) and not missing(Seats) then do;
-		Company = "Chevrolet";
+	if missing(COMPANY) and not missing(SEATS) then do;
+		COMPANY = "Chevrolet";
 	end;
 run;
 
@@ -66,9 +66,9 @@ run;
 
 data coches_v3;
 	set coches_v2;
-	if missing(Company) and missing(Seats) then do;
-		Company = "Mazda";
-		Seats = 2;
+	if missing(COMPANY) and missing(SEATS) then do;
+		COMPANY = "Mazda";
+		SEATS = 2;
 	end;
 run;
 

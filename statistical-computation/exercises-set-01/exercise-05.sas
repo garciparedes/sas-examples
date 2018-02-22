@@ -10,6 +10,8 @@
  * 	Sergio Garcia Prado - https://garciparedes.me
  * 
  */
+
+
 ods rtf file="/folders/myshortcuts/sas/sas-examples/data/bebes/BEBES.rtf"; 
 
 libname bebes '/folders/myshortcuts/sas/sas-examples/data/bebes';

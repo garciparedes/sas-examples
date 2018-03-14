@@ -1,0 +1,10 @@
+2009          	1             	m             	              	familia       	20            
+2009          	2             	m             	              	familia       	60            
+2009          	3             	m             	200           	piso          	20            
+2009          	4             	v             	130           	piso          	15            
+2009          	5             	v             	10            	familia       	40            
+2009          	6             	m             	10            	familia       	40            
+2009          	7             	v             	12            	familia       	30                      	              	              	              	              	              
+2010          	1             	v             	350           	colegio       	5             
+2010          	2             	v             	7             	familia       	20            
+2010          	3             	v             	3             	familia       	45            
